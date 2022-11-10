@@ -12,18 +12,19 @@ public class Movies {
 	
 	private String nombre;
 	
-	private Integer visitas;
+	private Integer visitas = 0;
 	
 	private Date fechaCreacion;
 	
 	private Date fechaModificacion;
 	
-	public Movies(String nombre, Date fechaCreacion) {
+
+	public Movies(String nombre, Categoria categoria) {
 		this.nombre = nombre;
-		this.fechaCreacion = fechaCreacion;
+		this.categoria = categoria;
 	}
-	
-	private List<Categoria> categoria;
+
+	private Categoria categoria;
 	
 	public String getId() {
 		return id;
@@ -49,11 +50,11 @@ public class Movies {
 		this.visitas = visitas;
 	}
 	
-	public List<Categoria> getCategoria() {
+	public Categoria getCategoria() {
 		return categoria;
 	}
 	
-	public void setCategoria(List<Categoria> categoria) {
+	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
 
