@@ -17,7 +17,9 @@ public class Movies {
 	private Date fechaCreacion;
 	
 	private Date fechaModificacion;
-	
+
+	public Movies() {
+	}
 
 	public Movies(String nombre, Categoria categoria) {
 		this.nombre = nombre;

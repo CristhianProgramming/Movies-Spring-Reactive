@@ -39,7 +39,15 @@ public class ServiceMoviesImpl implements IServiceMovies {
 
 	@Override
 	public Mono<Void> deleteMovie(String idMovie) {
-		return null;
+		return moviesDaos.deleteById(idMovie);
+	}
+
+	@Override
+	public Mono<Movies> updateMovie(Movies movie) {
+		return moviesDaos.save(movie).flatMap(p->{
+			p.setFechaModificacion(new Date());		
+			return moviesDaos.save(p);
+		});
 	}
 
 }

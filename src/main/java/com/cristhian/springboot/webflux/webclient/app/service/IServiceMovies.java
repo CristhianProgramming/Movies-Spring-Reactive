@@ -13,7 +13,7 @@ public interface IServiceMovies {
 	
 	public Mono<Movies> saveMovie(Movies movie);
 	
-	//public Mono<Movies> updateMovie(Movies movie,String idMovie);
+	public Mono<Movies> updateMovie(Movies movie);
 	
 	public Mono<Void> deleteMovie(String idMovie);
 	
